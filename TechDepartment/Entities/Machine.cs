@@ -1,0 +1,37 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace TechDepartment.Entities
+{
+    public class Machine : _Base
+    {
+        /// <summary>
+        /// Обозначение станка
+        /// </summary>
+        /// 
+        [MaxLength(50)]
+        public string Name { get; set; }
+
+        /// <summary>
+        /// Описание станка
+        /// </summary>
+        /// 
+        [MaxLength(150)]
+        public string Notes { get; set; }
+
+        public Machine() : base()
+        {
+
+        }
+
+        public Machine(string name, string note) : this()
+        {
+            Name = name;
+            Notes = note;
+        }
+    }
+}
